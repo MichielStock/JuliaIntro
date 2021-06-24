@@ -1,0 +1,4 @@
+name = "IntroJulia"
+uuid = "de70ec74-4cea-453d-8683-7e35f74ef4e3"
+authors = ["michielstock <michielfmstock@gmail.com>"]
+version = "0.1.0"
