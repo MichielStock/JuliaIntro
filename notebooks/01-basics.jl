@@ -27,6 +27,15 @@ begin
 	"""
 end
 
+# ╔═╡ 129a2e93-c773-4168-8ca6-9add359ee033
+macro terminal(ex)
+	return quote
+		PlutoUI.with_terminal() do
+			$(esc(ex))
+		end
+	end
+end
+
 # ╔═╡ fd21a9fa-4ab9-11eb-05e9-0d0963826b9f
 md"""
 # Notebook 1: Getting up and running
@@ -489,6 +498,9 @@ md"Passing an array to a function that takes a single element as argument takes 
 # ╔═╡ 61846dae-4ac1-11eb-389a-4fbe3f6145b1
 s([1, 2, 3, 4, 5])   # Multiplication is not defined for Arrays
 
+# ╔═╡ e52e0873-4223-449b-8374-ef647b019519
+
+
 # ╔═╡ 6321ae1a-4ac1-11eb-04cb-33e939694874
 s.([1, 2, 3, 4, 5])  # This is an elements-wise execution of s()
 
@@ -770,6 +782,7 @@ md"Make a plot of this function, comparing with `factorial`."
 # ╔═╡ Cell order:
 # ╠═f089cbaa-4ab9-11eb-09d1-05f49911487f
 # ╠═e97e5984-4ab9-11eb-3efb-9f54c6c307dd
+# ╠═129a2e93-c773-4168-8ca6-9add359ee033
 # ╟─fd21a9fa-4ab9-11eb-05e9-0d0963826b9f
 # ╠═0f47f5b2-4aba-11eb-2e5a-b10407e3f928
 # ╟─23d3c9cc-4abd-11eb-0cb0-21673effee6c
@@ -889,6 +902,7 @@ md"Make a plot of this function, comparing with `factorial`."
 # ╠═463689b0-4ac1-11eb-1b0f-b7a239011c5c
 # ╟─52bfff04-4ac1-11eb-1216-25eedd9184c3
 # ╠═61846dae-4ac1-11eb-389a-4fbe3f6145b1
+# ╠═e52e0873-4223-449b-8374-ef647b019519
 # ╠═6321ae1a-4ac1-11eb-04cb-33e939694874
 # ╟─3eda5d12-5a6e-11eb-3264-9925907c85b5
 # ╟─7b874424-4ac1-11eb-2d4e-0b4607559b8f
